@@ -1,0 +1,378 @@
+.row{
+    padding: 20px;
+    width: 300px;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    
+    overflow: hidden;
+    border-radius: 10px;
+    background: #2121214e;
+    border: 2px solid #313131;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+    ;
+    background-color: #0975f123;
+
+}
+
+
+  h2{
+    color: antiquewhite;
+    padding: 30px;
+    text-align: center;
+  }
+
+
+  ul{
+    color: #ffffff;
+    padding: 20px;
+  }
+
+  img{
+    width: 100%;
+  }
+  .modal-content{
+    background-color: #6f0adad9;
+  }
+
+  /* button {
+    text-decoration: none;
+    position: relative;
+    border: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #fff;
+    width: 9em;
+    height: 3em;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 300%;
+    border-radius: 30px;
+    z-index: 1;
+  }
+  
+  button:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+  }
+  
+  @keyframes ani {
+    0% {
+      background-position: 0%;
+    }
+  
+    100% {
+      background-position: 400%;
+    }
+  }
+  
+  button:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+  }
+  
+  button:hover::before {
+    filter: blur(20px);
+  }
+  
+  button:active {
+    background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+  } */
+
+  .btn {
+    --border-color: linear-gradient(-45deg, #ffae00, #aa5403, #ff7b00);
+    --border-width: .125em;
+    --curve-size: .5em;
+    --blur: 30px;
+    --bg: #080312;
+    --color: #afffff;
+    color: var(--color);
+      /* use position: relative; so that BG is only for .btn */
+    position: relative;
+    isolation: isolate;
+    display: inline-grid;
+    place-content: center;
+    padding: .5em 1.5em;
+    font-size: 17px;
+    border: 0;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+    clip-path: polygon(
+              /* Top-left */
+              0% var(--curve-size),
+  
+              var(--curve-size) 0,
+              /* top-right */
+              100% 0,
+              100% calc(100% - var(--curve-size)),
+  
+              /* bottom-right 1 */
+              calc(100% - var(--curve-size)) 100%,
+              /* bottom-right 2 */
+              0 100%);
+    transition: color 250ms;
+  }
+  
+  .btn::after,
+  .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  
+  .btn::before {
+    background: var(--border-color);
+    background-size: 300% 300%;
+    animation: move-bg7234 5s ease infinite;
+    z-index: -2;
+  }
+  
+  @keyframes move-bg7234 {
+    0% {
+      background-position: 31% 0%
+    }
+  
+    50% {
+      background-position: 70% 100%
+    }
+  
+    100% {
+      background-position: 31% 0%
+    }
+  }
+  
+  .btn::after {
+    background: var(--bg);
+    z-index: -1;
+    clip-path: polygon(
+              /* Top-left */
+              var(--border-width) 
+              calc(var(--curve-size) + var(--border-width) * .5),
+  
+              calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+  
+              /* top-right */
+              calc(100% - var(--border-width)) 
+              var(--border-width),
+  
+              calc(100% - var(--border-width)) 
+              calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+  
+              /* bottom-right 1 */
+              calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+              /* bottom-right 2 */
+              var(--border-width) calc(100% - var(--border-width)));
+    transition: clip-path 500ms;
+  }
+  
+  .btn:where(:hover, :focus)::after {
+    clip-path: polygon(
+                  /* Top-left */
+                  calc(100% - var(--border-width)) 
+  
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+      
+                  calc(100% - var(--border-width))
+  
+                  var(--border-width),
+      
+                  /* top-right */
+                  calc(100% - var(--border-width))
+  
+                   var(--border-width),
+      
+                  calc(100% - var(--border-width)) 
+  
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+      
+                  /* bottom-right 1 */
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                  calc(100% - var(--border-width)),
+  
+                  /* bottom-right 2 */
+                  calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                  calc(100% - var(--border-width)));
+    transition: 200ms;
+  }
+  
+  .btn:where(:hover, :focus) {
+    color: #fff;
+  }
+
+  button{
+    position: relative;
+    left: 67%;
+    bottom: 55px;
+  }
+
+  .nav-link disabled{
+    position: relative;
+    left: 70%;
+  }
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+   
+   
+      .row{
+        position: relative;
+        left: 22%;
+        top: 5rem;
+      }
+      h2{
+       width: 100%;
+       position: relative;
+       font-size: 30px;
+       bottom: 2rem;
+      }
+      button{
+        position: relative;
+        left: 12%;
+        bottom: 3rem;
+      }
+      .card-title1{
+       color: #ffffff;
+        width: 150px;
+        text-align: center;
+        position: relative;
+        left: 19%;
+        bottom: 3rem;
+    
+      }
+      .modal-footer{
+       
+        position: relative;
+        left: -20%;
+        top: 2rem;
+      }
+      #ventana-button{
+        position: relative;
+        top: 1rem;
+        left: 35%;
+      }
+  }
+  
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+    
+      .row{
+        padding-left: 100px;
+        position: relative;
+        left: 25%;
+        top: 5rem;
+        width: 55%;
+      }
+      h2{
+        position: relative;
+        left: -12%;
+      }
+     
+      h2{
+       width: 120%;
+       position: relative;
+       font-size: 25px;
+       bottom: 1.5rem;
+      }
+      button{
+        position: relative;
+        left: 23%;
+        bottom: 0rem;
+      }
+      .card-title1{
+       color: #3cc809;
+        width: 250px;
+        text-align: center;
+        position: relative;
+        left: 1%;
+        bottom: 1rem;
+    
+      }
+      .col-12{
+        position: relative;
+        left: 0%;
+      }
+      
+  }
+  
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    .row{
+        position: relative;
+        left: 38%;
+        top: -11.9rem;
+        width: 25%;
+      }
+      h2{
+       width: 120%;
+       position: relative;
+       font-size: 25px;
+       bottom: 1.5rem;
+       text-align: center;
+       left: -20%;
+    
+      }
+      button{
+        position: relative;
+        left: 20%;
+        bottom: 0rem;
+      }
+      .card-title1{
+       color: #fdfdfd;
+       width: 100%;
+        text-align: center;
+        position: relative;
+        left: -10%;
+        bottom: 02rem;
+    
+      }
+      .col-12{
+        position: relative;
+        left: 0%;
+      }
+      
+      img{
+        padding: 20px;
+      }
+     
+  }

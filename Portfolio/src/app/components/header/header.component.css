@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   a{
@@ -67,3 +68,220 @@
     }
     
   }
+=======
+/* estilo de del div para header */
+.card-shadow{
+    background-color: rgba(3,3,3, 0.765);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border:  1px solid rgba(17,17,17,0.664);
+    height: 80px;
+    overflow-y: hidden;
+}
+
+/* Estilo del h4"titulo del portfolio parte superior del header" */
+h4{
+    padding: 0;
+    width: 15%;
+    position: relative;
+    left: 10%;
+    top: 20%;
+    background-color: chocolate;
+    background: linear-gradient(to right, #cf21b8 0%, #220ecf 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* estilo de la lista de inicio y contacto */
+ul{
+    position: relative;
+    bottom: 20px;
+    left: 50%;
+}
+a{
+    color: #fff;
+}
+
+/* Estilo del boton de mi curriculum */
+button {
+    text-decoration: none;
+    position: relative;
+    border: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #fff;
+    width: 9em;
+    height: 3em;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 300%;
+    border-radius: 30px;
+    z-index: 1;
+  }
+  
+  button:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+  }
+  
+  @keyframes ani {
+    0% {
+      background-position: 0%;
+    }
+  
+    100% {
+      background-position: 400%;
+    }
+  }
+  
+  button:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+  }
+  
+  button:hover::before {
+    filter: blur(20px);
+  }
+  
+  button:active {
+    background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+  }
+
+  button{
+    position: relative;
+    left: 67%;
+    bottom: 55px;
+  }
+
+  .nav-link disabled{
+    position: relative;
+    left: 70%;
+  }
+
+  .Hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(144,100,186,0.25);
+-webkit-backdrop-filter: blur(1px);
+backdrop-filter: blur(1px);
+border: 1px solid rgba(144,100,186,0.125);
+  }
+
+
+  /* Estilo resposive del header general */
+  
+    /* Ejemplo de estilos para pantallas más grandes (mayor a 768px) */
+    @media (min-width: 768px) {
+      /* Estilos específicos para pantallas más grandes */
+      /* estilo de del div para header */
+      .card-shadow{
+        
+        overflow-x: hidden;
+      }
+
+      /* Estilo del h4"titulo del portfolio parte superior del header" */
+      h4{
+       width: 40%;
+       position: relative;
+       left: 3%;
+       top: 25px;
+
+      }
+
+      /* estilo de la lista de inicio y contacto */
+      ul{
+        position: relative;
+        left: -4%;
+        bottom: 1rem;
+      }
+
+      /* Estilo del boton de mi curriculum */
+    button {
+        position: relative;
+        bottom:2 rem;
+        left: 75%;
+    }
+
+    }
+  
+    /* Ejemplo de estilos para pantallas medianas (entre 576px y 767px) */
+    @media (min-width: 576px) and (max-width: 767px) {
+      /* Estilos específicos para pantallas medianas */
+        /* estilo de del div para header */
+      .card-shadow{
+        background-color: #03a8f42e;
+        overflow-x: hidden;
+      }
+
+      /* Estilo del h4"titulo del portfolio parte superior del header" */
+      h4{
+       width: 40%;
+       position: relative;
+       left: 3%;
+       top: 25px;
+
+      }
+
+      /* estilo de la lista de inicio y contacto */
+      ul{
+        position: relative;
+        left: 5%;
+        bottom: 1rem;
+      }
+
+      /* Estilo del boton de mi curriculum */
+    button {
+        position: relative;
+        bottom:2 rem;
+        left: 75%;
+    }
+
+
+    }
+  
+    /* Ejemplo de estilos para pantallas pequeñas (menor a 576px) */
+    @media (max-width: 575px) {
+      /* Estilos específicos para pantallas pequeñas */
+      
+      /* estilo de del div para header */
+      .card-shadow{
+        width: 100%;
+        background-color: #f441a63c;
+        overflow-x: hidden;
+      }
+      
+      /* Estilo del h4"titulo del portfolio parte superior del header" */
+      h4{
+        display: none;
+      }
+
+      /* estilo de la lista de inicio y contacto */
+      ul{
+        position: relative;
+        left: -25%;
+        bottom: -1rem;
+      }
+
+      /* Estilo del boton de mi curriculum */
+    button {
+        position: relative;
+        bottom: 1.5rem;
+        left: 55%;
+    }
+
+    }
+  
+  
+>>>>>>> 57fb295126ca91bceedc3016dbb9b5a00cfb7461
